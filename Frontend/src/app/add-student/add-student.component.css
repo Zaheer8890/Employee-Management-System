@@ -1,0 +1,97 @@
+/* Container Styling */
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    border: 2px solid #4CAF50;
+}
+
+/* Form Styling */
+.student-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Heading */
+h1 {
+    color: #4CAF50;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+/* Label Styling */
+label {
+    font-weight: bold;
+    color: #444;
+    margin: 5px 0;
+    text-align: left;
+}
+
+/* Input Fields */
+input {
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+    width: 100%;
+}
+
+/* Input Focus Effect */
+input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.6);
+}
+
+/* Submit Button */
+.submit-btn, .list-btn {
+    padding: 12px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Submit Button */
+.submit-btn {
+    background: #4CAF50;
+}
+
+.submit-btn:hover {
+    background: #388E3C;
+    box-shadow: 0 4px 10px rgba(56, 142, 60, 0.4);
+}
+
+/* Student List Button */
+.list-btn {
+    background: #388E3C;
+}
+
+.list-btn:hover {
+    background: #388E3C;
+    box-shadow: 0 4px 10px rgba(0, 91, 179, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+}
+
+
+.list-btn:hover {
+    background: #388E3C;
+}

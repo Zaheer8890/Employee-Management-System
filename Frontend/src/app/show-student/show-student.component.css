@@ -1,0 +1,340 @@
+/* General Table Styling 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+}
+
+.navbar-left {
+  flex: 1;
+}
+
+.navbar-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+
+.add-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background-color: #2980b9;
+}
+
+.logout-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+  margin-left: 10px;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.student-table thead {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.student-table th, .student-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.student-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+
+.delete-btn, .edit-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.delete-btn:hover, .edit-btn:hover {
+  background-color: #c0392b;
+}
+
+
+.pagination-controls {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pagination-controls button {
+  padding: 8px 16px;
+  font-size: 16px;
+  margin: 0 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+.search-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.search-container input {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  margin-top: 10px;
+}
+
+.search-container input:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .search-container input {
+    width: 100%;
+  }
+
+  .student-table th, .student-table td {
+    padding: 8px;
+  }
+
+  .add-btn, .logout-btn {
+    padding: 10px 16px;
+  }
+} */
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+}
+
+.navbar-left {
+  flex: 1;
+}
+
+.navbar-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.add-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background-color: #2980b9;
+}
+
+.logout-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Table Styling */
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: left;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.student-table thead {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.student-table th,
+.student-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+
+.student-table input {
+  width: 90%;
+  padding: 6px;
+  font-size: 14px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.student-table input:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.student-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Buttons */
+.delete-btn,
+.edit-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.edit-btn {
+  background-color: #3498db;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.edit-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Pagination */
+.pagination-controls {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pagination-controls button {
+  padding: 8px 16px;
+  font-size: 16px;
+  margin: 0 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .add-btn,
+  .logout-btn {
+    padding: 10px 16px;
+  }
+
+  .student-table th,
+  .student-table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .student-table input {
+    width: 100%;
+    font-size: 12px;
+  }
+}
+
+
+
+
+
+
+
+  

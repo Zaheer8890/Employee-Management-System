@@ -1,0 +1,193 @@
+
+
+
+
+<!--<table class="student-table">
+  <thead>
+    <tr>
+        <th>Student Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Department</th>
+        <th>Actions</th>
+        <th>Update</th>
+    </tr>
+  </thead>
+   <tbody>
+     <tr *ngFor="let student of students">
+       <td>{{student.id}}</td>
+       <td>{{student.name}}</td>
+       <td>{{student.age}}</td>
+       <td>{{student.dept}}</td>
+       <td>
+         <button class="delete-btn" (click)="deleteStudent(student.id)">Delete</button>
+       </td>
+       <td>
+        <button type="button" class="edit-btn" [routerLink]="['/edit', student.id]">Edit</button>
+      </td>
+      
+     </tr>
+   </tbody>
+</table>
+
+ Buttons Container 
+<div class="button-container">
+  <button class="add-btn" routerLink="/add-student">+ Add New Student</button>
+  <button class="logout-btn" (click)="logout()">🚪 Logout</button> 
+</div> -->
+
+<!--<table class="student-table">
+  <thead>
+    <tr>
+      <th>Student Id</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Department</th>
+      <th>Actions</th>
+      <th>Update</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{ student.id }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.age }}</td>
+      <td>{{ student.dept }}</td>
+      <td>
+        <button class="delete-btn" (click)="deleteStudent(student.id)">Delete</button>
+      </td>
+      <td>
+        <button type="button" class="edit-btn" [routerLink]="['/edit', student.id]">Edit</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!- Pagination Controls 
+<div class="pagination-controls">
+  <button (click)="previousPage()" [disabled]="currentPage === 0">Previous</button>
+  <span>Page {{ currentPage + 1 }} of {{ totalPages }}</span>
+  <button (click)="nextPage()" [disabled]="currentPage + 1 === totalPages">Next</button>
+</div>
+
+
+ Buttons Container 
+<div class="button-container">
+  <button class="add-btn" routerLink="/add-student">+ Add New Student</button>
+  <button class="logout-btn" (click)="logout()">🚪 Logout</button>
+</div> -->
+
+<!-- Navbar 
+<div class="navbar">
+  <div class="navbar-left">
+    <span class="navbar-title">Student List</span>
+  </div>
+
+  <div class="button-container">
+    <button class="add-btn" routerLink="/add-student">+ Add New Student</button>
+    <button class="logout-btn" (click)="logout()">🚪 Logout</button>
+  </div>
+</div>
+
+<!-- Search Bar for Filtering Students by Name, Department, or Age 
+<div class="search-container">
+  <input [(ngModel)]="searchTerm" (input)="filterStudents()" placeholder="Search by name, age, or dept" />
+</div>
+
+<!-- Student Table 
+<table class="student-table">
+  <thead>
+    <tr>
+      <th>Student Id</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Department</th>
+      <th>Actions</th>
+      <th>Update</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of filteredStudents">
+      <td>{{ student.id }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.age }}</td>
+      <td>{{ student.dept }}</td>
+      <td>
+        <button class="delete-btn" (click)="deleteStudent(student.id)">Delete</button>
+      </td>
+      <td>
+        <button type="button" class="edit-btn" [routerLink]="['/edit', student.id]">Edit</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+ Pagination Controls 
+<div class="pagination-controls">
+  <button (click)="previousPage()" [disabled]="currentPage === 0">Previous</button>
+  <span>Page {{ currentPage + 1 }} of {{ totalPages }}</span>
+  <button (click)="nextPage()" [disabled]="currentPage + 1 === totalPages">Next</button>
+</div> -->
+
+
+
+
+<!-- Navbar -->
+<div class="navbar">
+  <div class="navbar-left">
+    <span class="navbar-title">Student List</span>
+  </div>
+
+  <div class="button-container">
+    <button class="add-btn" routerLink="/add-student">+ Add New Student</button>
+    <button class="logout-btn" (click)="logout()">🚪 Logout</button>
+  </div>
+</div>
+
+<!-- Student Table with Per-Column Search -->
+<table class="student-table">
+  <thead>
+    <tr>
+      <th>
+        Student Id<br />
+        <input [(ngModel)]="idFilter" (input)="onSearchChange()" placeholder="Search ID" />
+      </th>
+      <th>
+        Name<br />
+        <input [(ngModel)]="nameFilter" (input)="onSearchChange()" placeholder="Search Name" />
+      </th>
+      <th>
+        Age<br />
+        <input [(ngModel)]="ageFilter" (input)="onSearchChange()" placeholder="Search Age" />
+      </th>
+      <th>
+        Department<br />
+        <input [(ngModel)]="deptFilter" (input)="onSearchChange()" placeholder="Search Dept" />
+      </th>
+      <th>Actions</th>
+      <th>Update</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{ student.id }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.age }}</td>
+      <td>{{ student.dept }}</td>
+      <td>
+        <button class="delete-btn" (click)="deleteStudent(student.id)">Delete</button>
+      </td>
+      <td>
+        <button class="edit-btn" [routerLink]="['/edit', student.id]">Edit</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Pagination Controls -->
+<div class="pagination-controls">
+  <button (click)="previousPage()" [disabled]="currentPage === 0">Previous</button>
+  <span>Page {{ currentPage + 1 }} of {{ totalPages }}</span>
+  <button (click)="nextPage()" [disabled]="currentPage + 1 === totalPages">Next</button>
+</div>
+

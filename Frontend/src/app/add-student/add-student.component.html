@@ -1,0 +1,24 @@
+
+
+<div class="container">
+    <h1>Add Student</h1>
+  
+    <form [formGroup]="student" (ngSubmit)="handleSubmit()" class="student-form">
+      <label for="id">Id:</label>
+      <input type="number" id="id" name="id" formControlName="id" placeholder="Enter student ID">
+      
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" formControlName="name" placeholder="Enter full name">
+      
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" formControlName="age" placeholder="Enter age">
+      
+      <label for="dept">Department:</label>
+      <input type="text" id="dept" name="dept" formControlName="dept" placeholder="Enter department">
+      
+      <button type="submit" class="submit-btn">Add Student</button>
+
+      <button type="button" class="list-btn" (click)="goToStudentList()">Student List</button>
+    </form>
+  </div>
+  
